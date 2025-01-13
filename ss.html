@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+background-color:#131724;
+color:#f3c36f;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f3c36f;
+  color: #1d2335;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: white ;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color:violet;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #1d2335;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us </h1>
+  <p><b>We offer top travel packages at affordable prices</b></p><br>
+  We help people make travel arrangements, 
+which include booking flights, hotels, sightseeing tours and making dining recommendations. Our role is to assess each customer's 
+unique needs, preferences, and budget to ensure their trip goes as smoothly as possible.We are dedicated to helping individuals and families create memories that will last a lifetime.
+</div>
+
+<h2 style="text-align:center">Our Travel Guides</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="D:\travel\a.jif" alt="Aruja" style="width:100%">
+      <div class="container">
+        <h2>Aruja Shrivastava</h2>
+        <p class="title">Founder & CEO</p>
+        <p>She likes to live vicariously through our clients in hearing about their adventures all over the world.</p>
+        <p>aruja07@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="D:\travel\ts.jif" alt="Chaitanya" style="width:100%">
+      <div class="container">
+        <h2>Chaitanya Sharma</h2>
+        <p class="title">Co-Founder & Member Experience Manager</p>
+        <p>She ensures that customers are fully satisfied and are left with no regrets of choosing us as their travel help.</p>
+        <p>chaitanyasharma295@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="D:\travel\e.jf" alt="Krishna" style="width:100%">
+      <div class="container">
+        <h2>Krishna Mistry</h2>
+        <p class="title">Professional Guide</p>
+        <p>Krishna is an excellent planner and an ideal travel agent.</p>
+        <p>krishnaamistry2003@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

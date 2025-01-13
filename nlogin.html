@@ -1,0 +1,200 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        body {
+background-image: url("travel-sales.gif");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: cover;
+    height: 500px;
+}
+        .box {
+	background-color: white;
+	margin-top: 120px;
+	margin-left: 520px;
+	margin-right: 520px;
+	padding: 10px;
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 156px;
+	height: 350px;
+}
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+.login__icon {
+	position: absolute;
+	top: 50px;
+	color: #7875B5;
+}
+.text {
+	font-family : Georgia;
+	text-align: center;
+	color: black;
+	font-size: 20px;
+}
+
+
+
+    </style>
+
+    <script>
+        function validate(event) {
+            var name = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+            // var email = document.getElementById('email');
+
+            var passwordcheck = /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+            var validpassword = passwordcheck.test(password);
+
+            var email = document.getElementById('email').value;
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var validemail = mailformat.test(email);
+
+
+
+            if (name == "" && password == "" && email=="") {
+                document.getElementById('name-error').innerHTML = "Please enter a your name";
+                document.getElementById('name-error').style.color = "red";
+                document.getElementById('password-error').innerHTML = "Please enter a some password";
+                document.getElementById('password-error').style.color = "red";
+                document.getElementById('email-error').innerHTML = "Please enter some email";
+                document.getElementById('email-error').style.color = "red";
+            }
+
+            
+            else if (  password == "" && email=="") {
+               
+                document.getElementById('password-error').innerHTML = "Please enter a some password";
+                document.getElementById('password-error').style.color = "red";
+                document.getElementById('email-error').innerHTML = "Please enter some email";
+                document.getElementById('email-error').style.color = "red";
+            }
+            else if (name == "") {
+                document.getElementById('name-error').innerHTML = "Please enter a valid name";
+                document.getElementById('name-error').style.color = "red";
+            }
+
+
+            else if (password === "") {
+
+
+                document.getElementById('password-error').innerHTML = "Please enter a some password";
+                document.getElementById('password-error').style.color = "red";
+
+            }
+
+
+            // else if (!validpassword) {
+            //     document.getElementById('password-error').innerHTML = "Password should contain at least <br>eight characters, including uppercase and lowercase letters,<br> numbers, and special characters.";
+            //     document.getElementById('password-error').style.color = "red";
+
+            // }
+
+            else if (!validemail) {
+
+
+                document.getElementById('email-error').innerHTML = "Please enter valid email";
+                document.getElementById('email-error').style.color = "red";
+
+            }
+            else if (email === "") {
+
+                document.getElementById('email-error').innerHTML = "Please enter some email";
+                document.getElementById('email-error').style.color = "red";
+
+            }
+
+
+            else {
+                var sum = 0;
+            }
+
+
+
+
+
+
+
+
+            if (sum == 0) {
+
+                document.getElementById("myForm").submit();
+            }
+
+            else {
+
+                event.preventDefault();
+                return false;
+
+            }
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+
+
+
+
+
+    <form id="myForm"  action="/nlogin.html" method="post">
+        <center>
+            <div class="box">
+            <h1>
+                LOGIN
+            </h1>
+            <div class="login__field">
+                <i class="login__icon fas fa-user"></i>
+            <input type="text" placeholder="name" name="name" id="name">
+            <div id="name-error"></div>
+        </div>
+
+            <br>
+            <div class="login__field">
+                <i class="login__icon fas fa-lock"></i>
+
+            <input type="text" placeholder="email" name="email" id="email">
+            <div id="email-error"></div>
+        </div>
+            <br>
+
+            <div class="login__field">
+                <i class="login__icon fas fa-lock"></i>
+            <input type="password" name="password" id="password" placeholder="password">
+            <div id="password-error"></div>
+
+            <br>
+
+            <button onclick="validate(event)"><a href="file:///D:/travel/trail.html#">Submit</a></button>
+
+</div>
+        </center>
+
+
+
+
+    </form>
+
+</body>
+
+</html>

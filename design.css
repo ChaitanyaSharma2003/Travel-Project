@@ -1,0 +1,13 @@
+div {
+  background-color: lightblue;
+  width: 500px;
+  border: 15px solid black;
+  padding: 50px;
+  margin: 20px;
+}
+body {
+background-color:white;
+margin-left: 200px;
+margin-right: 50px;
+width: 900px;
+}
